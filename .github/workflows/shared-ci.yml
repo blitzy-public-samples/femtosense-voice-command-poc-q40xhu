@@ -1,0 +1,70 @@
+name: Shared Components CI
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'src/shared/**'
+      - '.github/workflows/shared-ci.yml'
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - 'src/shared/**'
+      - '.github/workflows/shared-ci.yml'
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '14.x'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Set up Node.js ${{ env.NODE_VERSION }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+    
+    - name: Cache npm dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-node-
+    
+    - name: Install dependencies
+      run: |
+        cd src/shared
+        npm ci
+    
+    - name: Run linting
+      run: |
+        cd src/shared
+        npm run lint
+    
+    - name: Run tests
+      run: |
+        cd src/shared
+        npm test
+    
+    - name: Upload test coverage
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage
+        path: src/shared/coverage
+
+    - name: Build shared components
+      run: |
+        cd src/shared
+        npm run build
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist
+        path: src/shared/dist
