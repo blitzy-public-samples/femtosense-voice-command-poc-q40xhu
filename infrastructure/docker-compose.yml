@@ -1,0 +1,66 @@
+version: '3.7'
+
+services:
+  api:
+    build:
+      context: ../src/api
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=development
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../src/api:/app
+      - /app/node_modules
+    depends_on:
+      - database
+
+  backend:
+    build:
+      context: ../src/backend
+      dockerfile: Dockerfile
+    environment:
+      - PYTHONUNBUFFERED=1
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+    volumes:
+      - ../src/backend:/app
+      - ./data:/app/data
+
+  database:
+    build:
+      context: ../src/database
+      dockerfile: Dockerfile
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ../src/database:/app
+
+  monitoring:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+
+volumes:
+  data:
+
+networks:
+  default:
+    name: femtosense_network
+
+# Resource management for API service
+x-api-deploy: &api-deploy
+  deploy:
+    resources:
+      limits:
+        cpus: '2'
+        memory: 4G
+
+# Apply resource management to API service
+services:
+  api:
+    <<: *api-deploy
