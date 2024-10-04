@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    // Target ECMAScript version
+    "target": "ES2018",
+    
+    // Module code generation
+    "module": "commonjs",
+    
+    // Strict Type-Checking Options
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    
+    // Module Resolution Options
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "@shared/*": ["../shared/*"],
+      "@utils/*": ["utils/*"]
+    },
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    
+    // Source Map Options
+    "sourceMap": true,
+    "inlineSources": true,
+    
+    // Additional Checks
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    
+    // Advanced Options
+    "forceConsistentCasingInFileNames": true,
+    
+    // Output Options
+    "outDir": "./dist",
+    "removeComments": true,
+    "declaration": true,
+    "declarationMap": true,
+    
+    // Experimental Options
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    
+    // Library Inclusions
+    "lib": ["ES2018", "DOM"],
+    
+    // Type Checking
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts"
+  ]
+}
