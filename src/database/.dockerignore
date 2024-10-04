@@ -1,0 +1,47 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.py[cod]
+*$py.class
+
+# Environment and IDE-specific
+.env
+.venv
+env/
+venv/
+.idea/
+.vscode/
+
+# Test and documentation
+tests/
+test*.py
+docs/
+*.md
+
+# Version control
+.git
+.gitignore
+
+# Build and distribution
+*.egg-info/
+dist/
+build/
+
+# Project-specific
+data/
+!data/language_mappings.json
+!data/voice_profiles.json
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# OS-specific
+.DS_Store
+Thumbs.db
