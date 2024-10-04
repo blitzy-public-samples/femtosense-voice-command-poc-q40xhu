@@ -1,0 +1,50 @@
+{
+  "logLevel": "info",
+  "format": "[%timestamp%] %level%: %message%",
+  "timestamp": true,
+  "colorize": true,
+  "logFile": "./logs/app.log",
+  "categories": {
+    "api": {
+      "logLevel": "debug",
+      "format": "[%timestamp%] API - %level%: %message%"
+    },
+    "security": {
+      "logLevel": "warn",
+      "logFile": "./logs/security.log"
+    }
+  },
+  "rotation": {
+    "maxSize": "10m",
+    "maxFiles": 5,
+    "compress": true
+  },
+  "environment_handling": {
+    "development": {
+      "logLevel": "debug",
+      "colorize": true
+    },
+    "production": {
+      "logLevel": "warn",
+      "colorize": false
+    }
+  },
+  "color_scheme": {
+    "DEBUG": "Blue",
+    "INFO": "Green",
+    "WARN": "Yellow",
+    "ERROR": "Red"
+  },
+  "additional_fields": {
+    "app_name": "Femtosense Voice Command Generation",
+    "version": "1.0.0"
+  },
+  "performance_logging": {
+    "enabled": true,
+    "threshold": 1000
+  },
+  "sensitive_data": {
+    "mask": true,
+    "fields": ["apiKey", "password", "token"]
+  }
+}
