@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2023-11-15T12:00:00Z",
+    "description": "Voice profiles for the Femtosense Voice Command Generation PoC"
+  },
+  "voiceProfiles": {
+    "korean": {
+      "default": [
+        {
+          "id": "Chae-Won",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["clear", "professional"]
+        },
+        {
+          "id": "Min-Ho",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["deep", "confident"]
+        },
+        {
+          "id": "Seo-Yeon",
+          "gender": "female",
+          "ageCategory": "young-adult",
+          "region": "default",
+          "characteristics": ["cheerful", "energetic"]
+        },
+        {
+          "id": "Tae-Hee",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["calm", "soothing"]
+        },
+        {
+          "id": "Joon-Gi",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["authoritative", "mature"]
+        },
+        {
+          "id": "In-Guk",
+          "gender": "male",
+          "ageCategory": "young-adult",
+          "region": "default",
+          "characteristics": ["friendly", "approachable"]
+        },
+        {
+          "id": "Hye-Rim",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["warm", "motherly"]
+        },
+        {
+          "id": "Ji-Sung",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["articulate", "precise"]
+        },
+        {
+          "id": "Jae-Hyun",
+          "gender": "male",
+          "ageCategory": "young-adult",
+          "region": "default",
+          "characteristics": ["dynamic", "enthusiastic"]
+        },
+        {
+          "id": "Yoo-Jung",
+          "gender": "female",
+          "ageCategory": "young-adult",
+          "region": "default",
+          "characteristics": ["sweet", "gentle"]
+        },
+        {
+          "id": "Ji-Yeon",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["sophisticated", "elegant"]
+        },
+        {
+          "id": "Bo-Young",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["friendly", "approachable"]
+        },
+        {
+          "id": "Da-Hee",
+          "gender": "female",
+          "ageCategory": "young-adult",
+          "region": "default",
+          "characteristics": ["lively", "upbeat"]
+        },
+        {
+          "id": "Hye-Kyo",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["soft", "delicate"]
+        }
+      ]
+    },
+    "english": {
+      "uk": [
+        {
+          "id": "Beatrice",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "uk",
+          "characteristics": ["proper", "refined"]
+        },
+        {
+          "id": "Nelson",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "uk",
+          "characteristics": ["authoritative", "distinguished"]
+        },
+        {
+          "id": "Alfred",
+          "gender": "male",
+          "ageCategory": "senior",
+          "region": "uk",
+          "characteristics": ["wise", "dignified"]
+        }
+      ],
+      "us": [
+        {
+          "id": "Matt",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "us",
+          "characteristics": ["friendly", "casual"]
+        },
+        {
+          "id": "Linda",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "us",
+          "characteristics": ["warm", "professional"]
+        },
+        {
+          "id": "Betty",
+          "gender": "female",
+          "ageCategory": "senior",
+          "region": "us",
+          "characteristics": ["gentle", "motherly"]
+        }
+      ],
+      "canada": [
+        {
+          "id": "Ryan",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "canada",
+          "characteristics": ["polite", "clear"]
+        },
+        {
+          "id": "Pamela",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "canada",
+          "characteristics": ["friendly", "articulate"]
+        }
+      ]
+    },
+    "japanese": {
+      "default": [
+        {
+          "id": "Yuriko",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["polite", "soft-spoken"]
+        },
+        {
+          "id": "Akira",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["confident", "authoritative"]
+        },
+        {
+          "id": "Kasumi",
+          "gender": "female",
+          "ageCategory": "young-adult",
+          "region": "default",
+          "characteristics": ["cheerful", "energetic"]
+        },
+        {
+          "id": "Kenichi",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["calm", "reassuring"]
+        },
+        {
+          "id": "Tomoka",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["professional", "articulate"]
+        },
+        {
+          "id": "Takuya",
+          "gender": "male",
+          "ageCategory": "young-adult",
+          "region": "default",
+          "characteristics": ["friendly", "approachable"]
+        },
+        {
+          "id": "Takeshi",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["deep", "mature"]
+        },
+        {
+          "id": "Mariko",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["elegant", "refined"]
+        },
+        {
+          "id": "Kei",
+          "gender": "male",
+          "ageCategory": "young-adult",
+          "region": "default",
+          "characteristics": ["dynamic", "enthusiastic"]
+        },
+        {
+          "id": "Ayami",
+          "gender": "female",
+          "ageCategory": "young-adult",
+          "region": "default",
+          "characteristics": ["sweet", "gentle"]
+        },
+        {
+          "id": "Hideaki",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["wise", "experienced"]
+        },
+        {
+          "id": "Kaori",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["warm", "motherly"]
+        },
+        {
+          "id": "Kenji",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["assertive", "businesslike"]
+        },
+        {
+          "id": "Kuniko",
+          "gender": "female",
+          "ageCategory": "senior",
+          "region": "default",
+          "characteristics": ["gentle", "traditional"]
+        }
+      ]
+    }
+  },
+  "defaultVoices": {
+    "korean": "Chae-Won",
+    "english": "Matt",
+    "japanese": "Yuriko"
+  },
+  "qualitySettings": {
+    "sampleRate": 44100,
+    "bitDepth": 16,
+    "channels": 1,
+    "format": "wav"
+  }
+}
