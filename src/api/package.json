@@ -1,0 +1,49 @@
+{
+  "name": "femtosense-voice-command-api",
+  "version": "1.0.0",
+  "description": "Node.js package configuration file for the Femtosense Voice Command Generation API, defining project dependencies, scripts, and metadata.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "lint": "eslint src/**/*.ts"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/femtosense/voice-command-poc.git"
+  },
+  "keywords": [
+    "femtosense",
+    "voice-command",
+    "api",
+    "tts",
+    "gpt"
+  ],
+  "author": "Femtosense",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/femtosense/voice-command-poc/issues"
+  },
+  "homepage": "https://github.com/femtosense/voice-command-poc#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.11",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "eslint": "^8.4.0",
+    "jest": "^27.4.3",
+    "ts-jest": "^27.1.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  }
+}
