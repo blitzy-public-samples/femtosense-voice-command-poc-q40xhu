@@ -1,0 +1,21 @@
+{
+  "korean": {
+    "default": [
+      "Chae-Won", "Min-Ho", "Seo-Yeon", "Tae-Hee", "Joon-Gi",
+      "In-Guk", "Hye-Rim", "Ji-Sung", "Jae-Hyun", "Yoo-Jung",
+      "Ji-Yeon", "Bo-Young", "Da-Hee", "Hye-Kyo"
+    ]
+  },
+  "english": {
+    "uk": ["Beatrice", "Nelson", "Alfred"],
+    "us": ["Matt", "Linda", "Betty"],
+    "canada": ["Ryan", "Pamela"]
+  },
+  "japanese": {
+    "default": [
+      "Yuriko", "Akira", "Kasumi", "Kenichi", "Tomoka",
+      "Takuya", "Takeshi", "Mariko", "Kei", "Ayami",
+      "Hideaki", "Kaori", "Kenji", "Kuniko"
+    ]
+  }
+}
