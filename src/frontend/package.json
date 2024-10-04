@@ -1,0 +1,52 @@
+{
+  "name": "femtosense-voice-command-cli",
+  "version": "1.0.0",
+  "description": "Node.js package configuration file for the Femtosense Voice Command Generation frontend CLI tool, defining project dependencies, scripts, and metadata.",
+  "bin": {
+    "voice-command": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "start": "node dist/cli.js",
+    "dev": "ts-node src/cli.ts"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/femtosense/voice-command-poc.git"
+  },
+  "keywords": [
+    "voice-command",
+    "cli",
+    "femtosense",
+    "text-to-speech",
+    "audio-generation"
+  ],
+  "author": "Femtosense",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/femtosense/voice-command-poc/issues"
+  },
+  "homepage": "https://github.com/femtosense/voice-command-poc#readme",
+  "dependencies": {
+    "commander": "^8.3.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.2",
+    "@types/node": "^16.11.11",
+    "jest": "^27.4.3",
+    "ts-jest": "^27.1.0",
+    "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "eslint": "^8.4.0",
+    "ts-node": "^10.4.0"
+  }
+}
