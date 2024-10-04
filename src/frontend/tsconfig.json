@@ -1,0 +1,75 @@
+{
+  "compilerOptions": {
+    // Target ECMAScript version
+    "target": "ES2018",
+    
+    // Module code generation
+    "module": "commonjs",
+    
+    // Specify output directory for compiled files
+    "outDir": "./dist",
+    
+    // Specify input directory for source files
+    "rootDir": "./src",
+    
+    // Enable all strict type checking options
+    "strict": true,
+    
+    // Enable interoperability between CommonJS and ES Modules
+    "esModuleInterop": true,
+    
+    // Skip type checking of declaration files
+    "skipLibCheck": true,
+    
+    // Ensure consistent casing in file names
+    "forceConsistentCasingInFileNames": true,
+    
+    // Allow JSON imports
+    "resolveJsonModule": true,
+    
+    // Generate source maps for debugging
+    "sourceMap": true,
+    
+    // Specify library files to be included in the compilation
+    "lib": ["ES2018", "DOM"],
+    
+    // Specify module resolution strategy
+    "moduleResolution": "node",
+    
+    // Base directory to resolve non-relative module names
+    "baseUrl": ".",
+    
+    // Paths mapping for module aliases
+    "paths": {
+      "@interfaces/*": ["src/interfaces/*"],
+      "@constants/*": ["src/constants/*"],
+      "@utils/*": ["src/utils/*"],
+      "@commands/*": ["src/commands/*"]
+    },
+    
+    // Emit declaration files for better type inference
+    "declaration": true,
+    
+    // Remove comments in output files
+    "removeComments": true,
+    
+    // Report errors on unused locals
+    "noUnusedLocals": true,
+    
+    // Report errors on unused parameters
+    "noUnusedParameters": true,
+    
+    // Report error when not all code paths in function return a value
+    "noImplicitReturns": true,
+    
+    // Report errors for fallthrough cases in switch statement
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts"
+  ]
+}
