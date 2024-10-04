@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2023-11-15T00:00:00Z"
+  },
+  "voiceProfiles": {
+    "korean": {
+      "default": [
+        {
+          "id": "Chae-Won",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["clear", "professional"]
+        },
+        {
+          "id": "Min-Ho",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["deep", "authoritative"]
+        },
+        {
+          "id": "Seo-Yeon",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["warm", "friendly"]
+        },
+        {
+          "id": "Tae-Hee",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["energetic", "youthful"]
+        },
+        {
+          "id": "Joon-Gi",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["calm", "reassuring"]
+        }
+      ]
+    },
+    "english": {
+      "uk": [
+        {
+          "id": "Beatrice",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "uk",
+          "characteristics": ["proper", "clear"]
+        },
+        {
+          "id": "Nelson",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "uk",
+          "characteristics": ["authoritative", "refined"]
+        }
+      ],
+      "us": [
+        {
+          "id": "Matt",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "us",
+          "characteristics": ["casual", "friendly"]
+        },
+        {
+          "id": "Linda",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "us",
+          "characteristics": ["professional", "articulate"]
+        }
+      ]
+    },
+    "japanese": {
+      "default": [
+        {
+          "id": "Yuriko",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["polite", "clear"]
+        },
+        {
+          "id": "Akira",
+          "gender": "male",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["confident", "authoritative"]
+        },
+        {
+          "id": "Kasumi",
+          "gender": "female",
+          "ageCategory": "adult",
+          "region": "default",
+          "characteristics": ["gentle", "soothing"]
+        }
+      ]
+    }
+  },
+  "defaultVoices": {
+    "korean": "Chae-Won",
+    "english": "Matt",
+    "japanese": "Yuriko"
+  }
+}
