@@ -1,0 +1,104 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.py[cod]
+*$py.class
+
+# Test-related files
+tests/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment and local development files
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+ENV/
+
+# Development tools and IDE-specific files
+.git
+.gitignore
+*.swp
+.idea/
+.vscode/
+
+# Documentation
+README.md
+docs/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# Dependency management
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Docker-specific files (to avoid recursive copying)
+Dockerfile
+.dockerignore
+
+# Other unnecessary files for the Docker image
+*.md
+LICENSE
+CONTRIBUTING.md
+
+# Project-specific exclusions
+setup.py
+requirements.txt
+
+# Keep the main application file
+!narakeet_generate_stt.py
+
+# Keep necessary configuration files
+!src/backend/src/config/*.py
+
+# Keep core functionality
+!src/backend/src/core/*.py
+!src/backend/src/utils/*.py
+!src/backend/src/services/*.py
+!src/backend/src/cli/*.py
+
+# Exclude all test files
+src/backend/tests/
+
+# Terraform files (if any exist in this directory)
+*.tf
+*.tfstate
+*.tfvars
+
+# Any large data files or datasets
+*.csv
+*.json
+*.xml
+*.yaml
+*.yml
+!docker-compose.yml
+
+# Backup files
+*.bak
+*.backup
