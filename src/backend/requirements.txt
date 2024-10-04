@@ -1,0 +1,35 @@
+requests==2.26.0
+boto3==1.24.0
+tqdm==4.62.0
+pandas==1.3.0
+pydantic==1.8.2
+python-dotenv==0.19.0
+
+# Development Dependencies
+pytest==6.2.5
+pytest-cov==2.12.1
+mypy==0.910
+black==21.7b0
+isort==5.9.3
+flake8==3.9.0
+
+# Comments for requirements addressed:
+# 1. Python Dependencies (Technical Specification/4.2 FRAMEWORKS AND LIBRARIES)
+#    - All packages listed here are required for the Femtosense Voice Command Generation PoC backend application.
+
+# 2. AWS Integration (Technical Specification/4.4 THIRD-PARTY SERVICES)
+#    - boto3 is included for AWS S3 interactions.
+
+# 3. HTTP Client (Technical Specification/4.2 FRAMEWORKS AND LIBRARIES)
+#    - requests is included to enable API interactions with GPT-4o and Narakeet.
+
+# 4. Progress Tracking (Technical Specification/2.5 THEME DESIGN)
+#    - tqdm is included to provide user-friendly progress indicators.
+
+# Additional notes:
+# - pandas is included for efficient data manipulation and Excel/CSV file parsing.
+# - pydantic is used for data validation and settings management.
+# - python-dotenv is included for environment variable management.
+# - Development dependencies (pytest, mypy, black, isort, flake8) are included to ensure consistent development environments and code quality.
+# - All package versions are pinned to ensure reproducibility and prevent unexpected updates.
+# - The requirements align with the Python 3.7+ requirement specified in the technical specification.
