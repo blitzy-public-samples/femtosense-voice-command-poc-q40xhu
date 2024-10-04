@@ -1,0 +1,82 @@
+name: Frontend CI
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/frontend/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'src/frontend/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: src/frontend
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        cache-dependency-path: src/frontend/package-lock.json
+
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-node-
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Lint
+      run: npm run lint
+      # Requirement addressed: Code Quality (Technical Specification/6.3.4 Security Testing)
+
+    - name: Build
+      run: npm run build
+      # Requirement addressed: Build Automation (Technical Specification/5.1 DEPLOYMENT ENVIRONMENT)
+
+    - name: Test
+      run: npm test -- --coverage
+      # Requirement addressed: Continuous Integration (Technical Specification/3.5 CI/CD PIPELINE)
+
+    - name: Upload coverage reports
+      uses: codecov/codecov-action@v3
+      with:
+        directory: ./src/frontend/coverage
+
+    - name: Run security audit
+      run: npm audit --audit-level=moderate
+      # Requirement addressed: Security Scanning (Technical Specification/6.3 SECURITY PROTOCOLS)
+
+    - name: Check for outdated dependencies
+      run: npm outdated || true
+
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist
+        path: src/frontend/dist
+
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage
+        path: src/frontend/coverage
