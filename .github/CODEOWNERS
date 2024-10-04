@@ -1,0 +1,49 @@
+# Each line is a file pattern followed by one or more owners.
+# More specific patterns take precedence over less specific ones.
+# For more information, see: https://help.github.com/articles/about-code-owners/
+
+# Default owners for everything in the repo (unless a later match takes precedence)
+* @femtosense-lead-developer @femtosense-tech-lead
+
+# Shared components
+/src/shared/ @femtosense-shared-component-owner
+
+# API-related files
+/src/api/ @femtosense-api-lead
+/src/api/src/gpt/ @femtosense-gpt-specialist
+/src/api/src/narakeet/ @femtosense-narakeet-specialist
+
+# Backend Python code
+/src/backend/ @femtosense-backend-lead
+/src/backend/src/core/ @femtosense-core-backend-developer
+
+# Frontend CLI
+/src/frontend/ @femtosense-frontend-lead
+
+# Database and storage
+/src/database/ @femtosense-database-specialist
+
+# Infrastructure as Code
+/infrastructure/ @femtosense-devops-lead
+/infrastructure/terraform/ @femtosense-terraform-specialist
+
+# CI/CD Workflows
+/.github/workflows/ @femtosense-cicd-specialist
+
+# Security-sensitive configurations
+/src/shared/utils/security.ts @femtosense-security-officer
+/src/backend/src/utils/security.py @femtosense-security-officer
+/src/api/.env.example @femtosense-security-officer
+/src/backend/.env.example @femtosense-security-officer
+/src/frontend/.env.example @femtosense-security-officer
+
+# Documentation
+/*.md @femtosense-tech-writer
+/CONTRIBUTING.md @femtosense-community-manager
+/LICENSE @femtosense-legal-team
+
+# Test files
+/src/*/tests/ @femtosense-qa-lead
+
+# This file itself
+/.github/CODEOWNERS @femtosense-lead-developer @femtosense-tech-lead
